@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import somnisipLogo from '../assets/logos/somni_logo.png';
+import productDemo from '../assets/productImages/product_demo.png';
 import EmailCaptureModal from './EmailCaptureModal';
 import { trackCTAClick } from '../utils/analytics';
 
@@ -85,15 +86,13 @@ const HeroSection = () => {
             {/* Right Column - Product Showcase */}
             <div className="relative">
               <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8 lg:p-12">
-                {/* Product Placeholder */}
-                <div className="aspect-square bg-white rounded-xl shadow-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-primary-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-3xl">💧</span>
-                    </div>
-                    <p className="text-neutral-600 font-medium">Somnisip Device</p>
-                    <p className="text-sm text-neutral-500">Product image coming soon</p>
-                  </div>
+                {/* Product Image */}
+                <div className="aspect-square bg-white rounded-xl shadow-lg overflow-hidden flex items-center justify-center">
+                  <img
+                    src={productDemo}
+                    alt="Somnisip product demo"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 {/* Floating Stats */}

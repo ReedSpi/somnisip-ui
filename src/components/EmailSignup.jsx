@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { subscribeToMailchimp } from '../services/mailchimp';
 
 const EmailSignup = () => {
   const [email, setEmail] = useState('');
@@ -6,28 +7,13 @@ const EmailSignup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Formspree endpoint - replace with your actual Formspree form ID
-    const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORM_ID';
-    
     try {
-      const response = await fetch(formspreeEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email,
-          message: 'New Somnisip newsletter signup'
-        }),
-      });
-      
-      if (response.ok) {
-        setIsSubmitted(true);
-        setEmail('');
-      }
+      await subscribeToMailchimp(email, '', 'email_signup');
+      setIsSubmitted(true);
+      setEmail('');
     } catch (error) {
       console.error('Error submitting form:', error);
+      alert('There was an issue with your signup. Please try again.');
     }
   };
 

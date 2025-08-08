@@ -14,8 +14,8 @@ const MAILCHIMP_CONFIG = {
 // Direct API calls from frontend expose your API key
 export const subscribeToMailchimp = async (email, interest, source) => {
   try {
-    // Option 1: Use your own backend endpoint (recommended)
-    const response = await fetch('/api/mailchimp-subscribe', {
+    // Use Netlify Function endpoint directly (recommended for this project)
+    const response = await fetch('/.netlify/functions/mailchimp-subscribe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
