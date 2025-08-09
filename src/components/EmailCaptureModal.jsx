@@ -87,7 +87,7 @@ const EmailCaptureModal = ({ isOpen, onClose, source = 'modal' }) => {
                   className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 >
                   <option value="">Select a model</option>
-                  <option value="standard">Standard ($79)</option>
+                  <option value="basic">Basic ($79)</option>
                   <option value="plus">Plus ($159)</option>
                   <option value="unsure">Not sure yet</option>
                 </select>

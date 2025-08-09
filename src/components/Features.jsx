@@ -58,7 +58,7 @@ const Features = () => {
                 <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center">
                   <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
                 </div>
-                <span className="text-neutral-700">No electricity required (Standard model)</span>
+                <span className="text-neutral-700">No electricity required (Basic model)</span>
               </div>
             </div>
           </div>
