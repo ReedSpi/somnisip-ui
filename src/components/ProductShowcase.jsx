@@ -7,7 +7,7 @@ const ProductShowcase = () => {
       tagline: "Simple, user-installed",
       description: "A wall-mounted bedside water system focused on convenient, consistent hydration.",
       features: ["2L water capacity", "6ft retractable hose", "Easy to install", "Easy to clean", "3 extra mouthpieces"],
-      price: "$89"
+      price: "$79"
     },
     {
       name: "Somnisip Plus",
