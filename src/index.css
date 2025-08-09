@@ -23,3 +23,22 @@
     @apply bg-white border border-neutral-300 hover:border-neutral-400 text-neutral-800 font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5;
   }
 }
+
+@layer utilities {
+  @keyframes blob-float {
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    33% { transform: translate3d(-10px, 10px, 0) scale(1.02); }
+    66% { transform: translate3d(8px, -8px, 0) scale(0.98); }
+    100% { transform: translate3d(0, 0, 0) scale(1); }
+  }
+
+  .animate-blob-slow {
+    animation: blob-float 16s ease-in-out infinite;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import somnisipLogo from '../assets/logos/somnisip_logo_dark.png';
+import somnisipLogo from '../assets/logos/somni_logo_only.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,6 +7,8 @@ const Footer = () => {
   return (
     <footer className="bg-neutral-900 text-neutral-300 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        {/* Top gradient divider */}
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-primary-400/40 to-transparent mb-10" />
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
@@ -22,17 +24,6 @@ const Footer = () => {
               Revolutionizing bedside hydration for better sleep and wellness. 
               Wake up refreshed, every single night.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors">
-                Twitter
-              </a>
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors">
-                Instagram
-              </a>
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors">
-                LinkedIn
-              </a>
-            </div>
           </div>
 
           {/* Product */}
@@ -58,9 +49,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-neutral-800 mt-8 pt-8 text-center">
+        <div className="mt-8 pt-8 text-center">
           <p className="text-neutral-400">
-            © {currentYear} Somnisip. All rights reserved.
+            {currentYear} Somnisip. All rights reserved.
           </p>
         </div>
       </div>

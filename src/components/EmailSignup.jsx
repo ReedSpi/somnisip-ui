@@ -21,16 +21,16 @@ const EmailSignup = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-50">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4">
-          Stay Updated
+          Join the waitlist
         </h2>
         <p className="text-lg text-neutral-600 mb-8 max-w-2xl mx-auto">
-          Be the first to know when Somnisip launches. Get exclusive updates, early bird pricing, and sleep wellness tips.
+          Get an email when Somnisip is ready for next steps.
         </p>
         
         {isSubmitted ? (
           <div className="bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg max-w-md mx-auto">
-            <p className="font-medium">Thank you for subscribing!</p>
-            <p className="text-sm">We'll keep you updated on our progress.</p>
+            <p className="font-medium">You’re on the list.</p>
+            <p className="text-sm">We’ll send occasional updates.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -47,11 +47,11 @@ const EmailSignup = () => {
                 type="submit"
                 className="btn-primary whitespace-nowrap"
               >
-                Notify Me
+                Join the waitlist
               </button>
             </div>
             <p className="text-sm text-neutral-500 mt-4">
-              No spam, unsubscribe at any time. Privacy policy applies.
+              No spam. Unsubscribe anytime.
             </p>
           </form>
         )}
